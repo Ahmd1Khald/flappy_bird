@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'flappy_bird_game.dart';
 import 'game_over_page.dart';
 
-void main() {
+void main() async {
   final game = FlappyBirdGame();
   runApp(
     GameWidget(

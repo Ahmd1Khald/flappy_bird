@@ -18,7 +18,7 @@ class GameOverPage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
+            const Text(
               'Game Over!',
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
@@ -27,7 +27,7 @@ class GameOverPage extends StatelessWidget {
                 game.restartGame();
                 game.overlays.remove('gameOver');
               },
-              child: Text(
+              child: const Text(
                 'Restart',
                 style: TextStyle(
                   fontSize: 20,

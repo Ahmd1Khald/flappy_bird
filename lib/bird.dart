@@ -10,7 +10,7 @@ class Bird extends SpriteComponent
     with HasGameRef<FlappyBirdGame>, CollisionCallbacks {
   Bird();
 
-  final velocity = 200;
+  final velocity = 100;
 
   @override
   Future<void> onLoad() async {
@@ -31,7 +31,7 @@ class Bird extends SpriteComponent
   void fly() {
     add(
       MoveByEffect(
-        Vector2(0, -100),
+        Vector2(0, -50),
         EffectController(duration: 0.2, curve: Curves.decelerate),
       ),
     );
