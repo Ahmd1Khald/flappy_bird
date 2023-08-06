@@ -31,7 +31,7 @@ class Bird extends SpriteComponent
   void fly() {
     add(
       MoveByEffect(
-        Vector2(0, -50),
+        Vector2(0, -70),
         EffectController(duration: 0.2, curve: Curves.decelerate),
       ),
     );

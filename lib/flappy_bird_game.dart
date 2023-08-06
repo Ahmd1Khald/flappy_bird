@@ -11,10 +11,10 @@ import 'ground.dart';
 class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
   FlappyBirdGame();
 
-  double speed = 50;
+  double speed = 60;
   late Bird _bird;
   double _timeSinceLastPipeGroup = 0;
-  SpeechToText _speechToText = SpeechToText();
+  final SpeechToText _speechToText = SpeechToText();
   bool _speechEnabled = false;
   String _lastWords = '';
 
@@ -72,10 +72,10 @@ class FlappyBirdGame extends FlameGame with TapDetector, HasCollisionDetection {
   @override
   void update(double dt) {
     super.update(dt);
-    // _timeSinceLastPipeGroup += dt;
-    // if (_timeSinceLastPipeGroup > 1.5) {
-    //   add(PipeGroup());
-    //   _timeSinceLastPipeGroup = 0;
-    // }
+    _timeSinceLastPipeGroup += dt;
+    if (_timeSinceLastPipeGroup > 3.5) {
+      add(PipeGroup());
+      _timeSinceLastPipeGroup = 0;
+    }
   }
 }
